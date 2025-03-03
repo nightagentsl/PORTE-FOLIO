@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio de Nambea Gracia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <canvas id="backgroundCanvas"></canvas>
+    <header>
+        <h1>Nambea Gracia</h1>
+        <p>Étudiante en Bachelor 1 de cybersécurité</p>
+    </header>
+    <section id="parcours">
+        <h2>Mon Parcours Académique</h2>
+        <p>Je suis étudiante à Ynov Campus depuis septembre 2024.</p>
+        <p>J'ai obtenu un baccalauréat professionnel en métiers de la sécurité au lycée Jean-Jacques Audubon.</p>
+    </section>
+    <section id="engagement">
+        <h2>Mon Engagement Militaire</h2>
+        <p>Je suis engagée dans la Réserve Opérationnelle de l'armée de terre au régiment du génie à Angers depuis 2023.</p>
+    </section>
+    <section id="projets">
+        <h2>Mes Projets</h2>
+        <p>Voici quelques-uns des projets sur lesquels j'ai travaillé :</p>
+        <ul>
+            <li><strong>Projet 1:</strong> Dans le cadre de développement de projet pour les B1 de manière à découvrir les langages de programmation et renforcer le travail en équipe. Un projet collectif a été mis en place. Groupie Tracker est une application web moderne qui permet de suivre les artistes et leurs concerts en temps réel. Elle utilise une API REST pour récupérer et afficher des informations détaillées sur les artistes, leurs albums, ainsi que les dates et lieux de leurs concerts.</li>
+            <li><strong>Projet 2:</strong> Le projet Puissance 4 en Java consiste à développer un jeu de société classique où deux joueurs s'affrontent. Le but est d'aligner quatre jetons de sa couleur horizontalement, verticalement ou en diagonale. Le projet met en avant la programmation orientée objet, la manipulation des tableaux et l'interface utilisateur graphique en Java.</li>
+        </ul>
+    </section>
+    <footer>
+        <p>Contactez-moi sur mes réseaux sociaux : <a href="https://www.linkedin.com/in/gracia-nambea" target="_blank">LinkedIn</a>.</p>
+    </footer>
+    <script src="animations.js"></script>
+    <script>
+        // Animation d'apparition
+        window.onload = function() {
+            const sections = document.querySelectorAll('section');
+            sections.forEach((section) => {
+                setTimeout(() => {
+                    section.classList.add('visible');
+                }, 100);
+            });
+        };
+
+        // Animation de survol
+        const sectionElements = document.querySelectorAll('section');
+        sectionElements.forEach((section) => {
+            section.addEventListener('mouseenter', () => {
+                section.style.filter = 'blur(2px)';
+                section.style.transform = 'scale(1.05) rotate(5deg)';
+            });
+            section.addEventListener('mouseleave', () => {
+                section.style.filter = 'none';
+                section.style.transform = 'scale(1) rotate(0)';
+            });
+        });
+    </script>
+</body>
+</html>
