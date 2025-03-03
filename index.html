@@ -43,19 +43,6 @@
                 }, 100);
             });
         };
-
-        // Animation de survol
-        const sectionElements = document.querySelectorAll('section');
-        sectionElements.forEach((section) => {
-            section.addEventListener('mouseenter', () => {
-                section.style.filter = 'blur(2px)';
-                section.style.transform = 'scale(1.05) rotate(5deg)';
-            });
-            section.addEventListener('mouseleave', () => {
-                section.style.filter = 'none';
-                section.style.transform = 'scale(1) rotate(0)';
-            });
-        });
     </script>
 </body>
 </html>
